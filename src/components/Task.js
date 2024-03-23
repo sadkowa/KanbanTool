@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import TasksContext from "../context/TasksContext";
 import { initColumns } from "../providers/initData";
 
-const Task = props => {
-    const { user, name, info, idColumn, id, priority } = props.task
+const Task = ({ task }) => {
+    const { user, name, info, idColumn, id, priority } = task
 
     const { moveTask, openDeletePopup, setDeleteId, setFormIsActive } = useContext(TasksContext)
 
